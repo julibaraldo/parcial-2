@@ -1,0 +1,59 @@
+header, footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header {
+    height: 20vh;
+}
+body{
+    background-image: url('imagenes/9205375.jpg');
+    background-repeat: repeat;
+}
+main {
+    
+    min-height: 70vh;
+}
+footer {
+    height: 10vh;
+}
+.row{
+    padding-bottom:  20px;
+
+}
+.icon {
+    width: 64px;
+}
+
+.btn-nueva{
+    bottom: 36px;
+    right: 36px;
+}
+
+.btn-edit {
+    color: rgb(252, 178, 19);
+    cursor: pointer;
+    transition: all ease-in-out 90.7;
+}
+
+.btn-edit:hover {
+    transform: scale(1.2);
+}
+
+.btn-delete {
+    color: red;
+    cursor: pointer;
+    transition: all ease-in-out 90.7;
+}
+
+.btn-delete:hover {
+    transform: scale(1.2);
+}
+.list-group-item-warning{
+    padding: 10px
+}
+
+#modalInfoLabel{
+    color: black;
+    
+}
