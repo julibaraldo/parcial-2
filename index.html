@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagenes/logo.png" type="logo">
+    <title>Parcial 02</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header class="bg-warning text-white">
+        <h1><img src="imagenes/logo.png" alt="logo"> Materias <button onclick="nuevaMateria()" type="button" class="btn btn-danger btn-nueva"><i class="fa-solid fa-plus"></i> </button>
+        </h1> 
+
+        
+    </header>
+
+    <main class="container mt-2 col-md-6">
+        <ul id="notasLista" class="list-group">
+        </ul>
+
+        <div class="container text-center">
+            <div class="row row-cols-2 text-bg-info p-3">
+                <h2>1° CUATRIMESTRE</h2>
+            </div>
+            <div class="row" id="primero"></div>
+
+            <div class="row row-cols-2 text-bg-info p-3">
+                <h2>2° CUATRIMESTRE</h2>
+                
+            </div>
+            <div class="row" id="segundo"></div>
+
+            <div class="row row-cols-2 text-bg-info p-3">
+                <h2>3° CUATRIMESTRE</h2>
+            
+            </div>
+            <div class="row" id="tercero"></div>
+
+
+            <div class="row row-cols-2 text-bg-info p-3">
+                <h2>4° CUATRIMESTRE</h2>
+                
+            </div>
+            <div class="row" id="cuarto"></div>
+
+            <div class="row row-cols-2 text-bg-info p-3">
+                <h2>5° CUATRIMESTRE</h2>
+                
+            </div>
+            <div class="row" id="quinto"></div>
+
+            <div class="row row-cols-2 text-bg-info p-3">
+                <h2>6° CUATRIMESTRE</h2>
+                
+            </div>
+            <div class="row" id="sexto"></div>
+
+        </div>
+        
+    <div class="modal fade" id="modalNota" tabindex="-1" aria-labelledby="modalNotaLabel" aria-hidden="true">
+
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modalNotaLabel">Ingresar Materia:</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="p-2 select">
+                    <label for="">Cuatrimestre:</label>
+                    <select id="textCuatr" class="form-control">
+                        <option selected disabled>Seleccione una opción. 🔽</option>
+                        <option value="1°CUATRIMESTRE">1° CUATRIMESTRE</option>
+                        <option value="2°CUATRIMESTRE">2° CUATRIMESTRE</option>
+                        <option value="3°CUATRIMESTRE">3° CUATRIMESTRE</option>
+                        <option value="4°CUATRIMESTRE">4° CUATRIMESTRE</option>
+                        <option value="5°CUATRIMESTRE">5° CUATRIMESTRE</option>
+                        <option value="6°CUATRIMESTRE">6° CUATRIMESTRE</option>
+                    </select>
+                </div>
+                <div class="p-2">
+                    <label for="">Materia:</label>
+                    <textarea id="textMateria" class="form-control" rows="2"></textarea>
+                </div>
+
+                <div class="p-2 select">
+                    <label for="">Notas:</label>
+                    <select id="textNota1" class="form-control">
+                        <option selected disabled>Seleccione una opción. 🔽</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+
+                    </select>
+                    <select id="textNota2" class="form-control">
+                        <option selected disabled>Seleccione una opción. 🔽</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+
+                    </select>
+                    <select id="textNota3" class="form-control">
+                        <option selected disabled>Seleccione una opción. 🔽</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+
+                    </select>
+                </div>
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button onclick="crear();" type="button" class="btn btn-warning">Guardar</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    </main>
+
+    <footer class="bg-dark text-white">  
+        <button onclick="info()" type="button" class="btn btn-danger btn-nueva">Información</button>
+        <div class="modal fade" id="modalInfo" tabindex="-1" aria-labelledby="modalInfoLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <p class="modal-body" id="modalInfoLabel">Parcial 02 | Diseño y Programación Web | Albiero Valentina y Baraldo Julieta | DMT3BP | 2024</p>
+                    <img src="imagenes/valentina_albiero.jpeg" alt="Albiero Valentina" width=50px>
+                    <img src="imagenes/julieta_baraldo.jpeg" alt="Baraldo Julieta" width=50px>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>
